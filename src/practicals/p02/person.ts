@@ -6,9 +6,8 @@ export class Person {
 
     static COUNTRY: string = 'THAILAND';
 
-    setAge(age: number): number {
+    setAge(age: number): void {
         this.age = age;
-        return 0;
     }
 
     getAge(): number {

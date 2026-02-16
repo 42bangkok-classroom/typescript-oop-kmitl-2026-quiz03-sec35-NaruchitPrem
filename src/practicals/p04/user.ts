@@ -1,1 +1,25 @@
-export class User {}
+export class User {
+    public username: string = '';
+    private password: string = '';
+    private LOGIN_ATTEMPS: number = 0;
+
+    constructor(username: string , password: string) {
+        this.username = username;
+        this.password = password;
+    }
+
+    private validatePassword (password: string): boolean {
+        return this.password === password;
+    }
+
+    login(password: string):boolean {
+        this.LOGIN_ATTEMPS  = this.LOGIN_ATTEMPS + 1;
+        return this.validatePassword(password)
+    }
+
+    getLoginAttempts(): number{
+        return this.LOGIN_ATTEMPS;
+    }
+
+}
+
