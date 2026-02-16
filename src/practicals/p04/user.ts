@@ -20,9 +20,10 @@ export class User {
         return false;
     }
 
-    getLoginAttempts(): number{
-        return this.LOGIN_ATTEMPS;
+    getLoginAttempts(): string{
+        return `${this.LOGIN_ATTEMPS}`;
     }
 
 }
+
 
