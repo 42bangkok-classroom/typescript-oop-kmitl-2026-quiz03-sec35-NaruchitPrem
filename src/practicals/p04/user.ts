@@ -12,13 +12,16 @@ export class User {
         return this.password === password;
     }
 
-    login(password: string):boolean {
+    login(password: string): boolean {
         this.LOGIN_ATTEMPS  = this.LOGIN_ATTEMPS + 1;
-        return this.validatePassword(password)
+        if (this.validatePassword(password)) {
+            return true;
+        }else
+        return false;
     }
 
-    getLoginAttempts(): number{
-        return this.LOGIN_ATTEMPS;
+    getLoginAttempts(): string{
+        return `${this.LOGIN_ATTEMPS}`;
     }
 
 }
