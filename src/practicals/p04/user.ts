@@ -1,6 +1,6 @@
 export class User {
     public username: string = '';
-    private password: string = '';
+    private password: string;
     private LOGIN_ATTEMPS: number = 0;
 
     constructor(username: string , password: string) {
@@ -14,7 +14,7 @@ export class User {
 
     login(password: string): boolean {
         this.LOGIN_ATTEMPS  = this.LOGIN_ATTEMPS + 1;
-        if (this.validatePassword(password)) {
+        if (this.password === password) {
             return true;
         }else
         return false;
