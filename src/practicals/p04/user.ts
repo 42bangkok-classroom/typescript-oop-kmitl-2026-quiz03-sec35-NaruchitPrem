@@ -20,8 +20,8 @@ export class User {
         return false;
     }
 
-    getLoginAttempts(): string{
-        return `${this.LOGIN_ATTEMPS}`;
+    getLoginAttempts(): number{
+        return this.LOGIN_ATTEMPS;
     }
 
 }
